@@ -1,0 +1,21 @@
+- name: create file inside the shellmodule-ana folder
+  file: 
+    state: touch
+    path: "~/shellmodule-ana/{{item}}"
+  with_items:
+    -samplefile1
+    -samplefile2
+    -samplefile3
+- name: create file inside the filemoudle-name folder
+  file:
+    state: touch
+    path: "~/filemodule-ana/{{ item.filename }}_{{ item.envtype }}"
+  with_items:
+    - { filename: 'file1', envtype: 'CI' }
+    - { filename: 'file2', envtype: 'DEV' }
+    - { filename: 'file3', envtype: 'TEST' }
+    
+    
+    
+     
+ 
