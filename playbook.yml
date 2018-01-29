@@ -2,8 +2,8 @@
 - hosts: ansible-sample
   tasks:
    - name: check if shellmodule-ana already exists
-     stat:
-     path: "~/shellmodule-ana"
+     stat: 
+       path: "~/shellmodule-ana"
      register: shellmodulevariable
 
    - debug: var=shellmodulevariable
