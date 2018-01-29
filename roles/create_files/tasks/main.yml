@@ -24,6 +24,11 @@
   copy:
     src: "../files/oracle-installer.jar"
     dest: "~/{{ folder1 }}/oracle-installer.jar"
-    
-     
- 
+- name: install oracle-installer.jar
+  shell: "echo 'Oracle is fun' > ~/install.log"
+  shell: "java -jar oracle-installer.jar > install.log"
+
+- name: Fetch install.log to Jenkins workspace
+  fetch:
+    src: "~/install.log"
+    dest: "~/{{ jenkinsworkspace }}"
