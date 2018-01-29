@@ -1,15 +1,15 @@
-- name: check if shellmodule-ana already exists
+- name: check if {{ folder1 }} already exists
   stat: 
-    path: "~/shellmodule-ana"
+    path: "~/{{ folder1 }}"
   register: shellmodulevariable
 
 - debug: var=shellmodulevariable
 
 - name: create folder using shell module
-  shell: "mkdir ~/shellmodule-ana"
+  shell: "mkdir ~/{{ folder1 }}"
   when: shellmodulevariable.stat.exists != true
 
 - name: create folder using file module
   file:
     state: directory
-    path: "~/filemodule-ana"
+    path: "~/{{ folder2 }}"
