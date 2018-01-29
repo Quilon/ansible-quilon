@@ -10,7 +10,7 @@
 
    - name: create folder using shell module
      shell: "mkdir ~/shellmodule-ana"
-     when: shellmodulevariable.stat.exist != true
+     when: shellmodulevariable.stat.exists != true
 
    - name: create folder using file module
      file:
