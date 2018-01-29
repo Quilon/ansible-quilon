@@ -14,6 +14,12 @@
     - { filename: 'file1', envtype: 'CI' }
     - { filename: 'file2', envtype: 'DEV' }
     - { filename: 'file3', envtype: 'TEST' }
+
+- name: create shellscript.shellmodule-ana
+  template: 
+    src: "../templates/shellscript.sh.j2"
+    dest: "~/{{ folder2 }}/shellscript.sh"
+    mode: 755
     
     
     
