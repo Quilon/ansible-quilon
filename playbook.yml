@@ -20,4 +20,9 @@
    - name: create a file inside the shellmodule-ana folder
      file:
        state: touch
+       path: "~/shellmodule-pao/{{ item}}"
+     with items:
+             - samplefile1
+             - samplefile2
+             - samplefile3
 
