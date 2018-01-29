@@ -14,5 +14,10 @@
 
    - name: create folder using file module
      file:
-     state: directory
-     path: "~/filemodule-ana"
+       state: directory
+       path: "~/filemodule-ana"
+
+   - name: create a file inside the shellmodule-ana folder
+     file:
+       state: touch
+
